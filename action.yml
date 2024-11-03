@@ -4,12 +4,12 @@ inputs:
   msg:
     description: "Message to print"
     required: true
-    default: "default"
+    default: "Hello, World!"
 runs:
   using: "composite"
   steps:
-    - name: print_msg
+    - name: Print message
       shell: bash
       env:
-        MSG: "${{ inputs.msg }}"
+        MSG: ${{ inputs.msg }}
       run: echo "your message: $MSG"
