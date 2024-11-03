@@ -13,4 +13,4 @@ runs:
       shell: bash
       env:
         MSG: "${{ inputs.msg }}"
-      run: echo "hello world"
+      run: echo "your message: $MSG"
