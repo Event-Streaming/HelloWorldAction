@@ -13,4 +13,4 @@ runs:
       shell: bash
       env:
         MSG: "${{ msg }}"
-      run: echo "$MSG"
+      run: echo "hello world"
