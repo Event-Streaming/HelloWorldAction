@@ -1,0 +1,21 @@
+name: Scenario Tests
+on:
+  push:
+    branches:
+    - main
+  workflow_dispatch:
+
+jobs:
+  Scenario_1:
+    name: Default Inputs
+    runs-on: ubuntu-latest
+    steps:
+      - id: checkout
+        name: Checkout
+        uses: actions/checkout@v4
+
+      - id: hello_world
+        name: hello world
+        uses: ./
+        with:
+          msg: "hello world"
